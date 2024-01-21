@@ -9,7 +9,7 @@ Este projeto tem como objetivo exemplificar a aplicação dos princípios SOLID 
 ### 1. Princípio da Responsabilidade Única (SRP)
 
 - **Descrição:** Cada classe deve ter apenas uma responsabilidade. Isso promove a coesão, facilita a manutenção e reduz a probabilidade de erros.
-- **Exemplo no Projeto:** [Link para exemplo SRP](solid-java/src/principio-responsabilidade-unica)
+- **Exemplo no Projeto:** [Link para exemplo SRP](https://github.com/Joaooh98/solid-java/tree/main/src/principio_responsabilidade_unica/solucao)
 
 ### 2. Princípio do Aberto/Fechado (OCP)
 
