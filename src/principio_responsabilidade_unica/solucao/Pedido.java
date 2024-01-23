@@ -35,4 +35,8 @@ public class Pedido {
     public boolean isvalid() {
        return true;
     }
+
+    public boolean isPossuiItens() {
+        return true;
+    }
 }

@@ -4,18 +4,12 @@ public class ProcessaPedidoSRP {
 
     public void processar(Pedido pedido) {
 
-        if (pedido.isvalid()) {
+        DbPostgres dbPostgres = new DbPostgres();
+        EnviarConfirmacao enivarConfirmacao = new EnviarConfirmacao();
 
-            DbPostgres dbPostgres = new DbPostgres();
-            EnviarConfirmacao enivarConfirmacao = new EnviarConfirmacao();
+        dbPostgres.salvar(pedido);
 
-            dbPostgres.salvar(pedido);
-
-            enivarConfirmacao.enviarEmailComfirmacao(pedido);
-        } else {
-
-            System.out.println("pedido com erro");
-        }
+        enivarConfirmacao.enviarEmailComfirmacao(pedido);
 
     }
 }
