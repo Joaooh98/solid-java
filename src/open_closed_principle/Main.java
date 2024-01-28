@@ -1,10 +1,10 @@
 package open_closed_principle;
 
-import open_closed_principle.solucao.MetodoPagamento;
-import open_closed_principle.solucao.PagamentoCerto;
-import open_closed_principle.solucao.PagamentoComCartao;
-import open_closed_principle.solucao.PagamentoEmDinheiro;
-import open_closed_principle.violacao.Pagamento;
+import open_closed_principle.solucaopratica.MetodoPagamento;
+import open_closed_principle.solucaopratica.PagamentoCerto;
+import open_closed_principle.solucaopratica.PagamentoComCartao;
+import open_closed_principle.solucaopratica.PagamentoEmDinheiro;
+import open_closed_principle.violacaopratica.Pagamento;
 
 public class Main {
     public static void main(String[] args) {

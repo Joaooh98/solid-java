@@ -31,6 +31,6 @@ OCP - Open Closed Principle
     }
 
     ```
-        Solucao: criar uma interface MetodoPagamento e, em seguida, e criar classes para cada metodo de pagamento aberta para extensao
+        Solucao: 
 
          
