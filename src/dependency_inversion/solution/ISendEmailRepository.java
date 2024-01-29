@@ -1,5 +1,8 @@
 package dependency_inversion.solution;
 
-public class ISendEmailRepository {
-    
+import single_responsibility.solucao.Order;
+
+public interface ISendEmailRepository {
+
+    void send(Order order);
 }

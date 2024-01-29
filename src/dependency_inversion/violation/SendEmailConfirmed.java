@@ -4,9 +4,8 @@ import single_responsibility.solucao.Order;
 
 public class SendEmailConfirmed {
 
-    public void sendoEmail(Order order) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sendoEmail'");
+    public void sendEmail(Order order) {
+        System.out.println("envoy");
     }
     
 }

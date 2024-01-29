@@ -1,5 +1,8 @@
 package dependency_inversion.solution;
 
-public class IBankDateRepository {
-    
+import single_responsibility.solucao.Order;
+
+public interface IBankDateRepository {
+
+    boolean save(Order order);
 }

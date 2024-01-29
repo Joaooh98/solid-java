@@ -4,7 +4,8 @@ import single_responsibility.solucao.Order;
 
 public class ProcessOrder {
     
-    public void process(Order order){
+    public void process(Order order, boolean isOracle){
+        OracleRepository oracleRepository = new OracleRepository();
         PostgresRepository postgresRepository = new PostgresRepository();
         SendEmailConfirmed send = new SendEmailConfirmed();
 
@@ -14,8 +15,14 @@ public class ProcessOrder {
         order.setCustomerEmail("john@gmail.com");
         order.setId(1);
 
-        postgresRepository.salvar(order);
-        send.sendoEmail(order);
+        if (isOracle) {
+            oracleRepository.salvar(order);
+        }else{
+
+            postgresRepository.salvar(order);
+        }
+
+        send.sendEmail(order);
 
     }
 }

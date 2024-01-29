@@ -1,12 +1,12 @@
 package single_responsibility.violacao;
 
-public class EnviarGmail {
+public class SendGmail {
 
-    public EnviarGmail(String string, String string2) {
+    public SendGmail(String string, String string2) {
        // confg. conexa com conta.
     }
 
-    public void enviar(String html, String email) {
+    public void send(String html, String email) {
         System.out.println("E-mail enviado");
     }
     
