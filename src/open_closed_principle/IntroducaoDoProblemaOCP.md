@@ -9,28 +9,25 @@ OCP - Open Closed Principle
     problema: deve ser inserido mais meios de pamentos:
 
     ```java
-    public class Pagamento {
-        public void realizarPagamento(double valor) {
-            // Lógica para pagamento em dinheiro
-            System.out.println("Pagamento em dinheiro no valor de " + valor + " realizado.");
-        }
-    }
+    public class ProcessaPedido {
+        public void processar(Order pedido) {
+            if (!pedido.isPossuiItens()) {
+                throw new RuntimeException("Nao e possivel continuar! Pedido sem itens.");
+            }
 
-            // erro cometido 
-    public class Pagamento {
-        public void realizarPagamento(double valor, String tipo) {
-            if (tipo.equals("dinheiro")) {
-                // Lógica para pagamento em dinheiro
-                System.out.println("Pagamento em dinheiro no valor de " + valor + " realizado.");
-            } else if (tipo.equals("cartao")) {
-                // Lógica para pagamento com cartão de crédito
-                System.out.println("Pagamento com cartão de crédito no valor de " + valor + " realizado.");
+            DbPostgres dbPostgres = new DbPostgres();
+            EnviarConfirmacao enivarConfirmacao = new EnviarConfirmacao();
+
+            dbPostgres.salvar(pedido);
+
+            enivarConfirmacao.enviarEmailComfirmacao(pedido);
+
+            if (!pedido.isvalid()) {
+                throw new RuntimeException("Nao foi possivel continuar! pedido sem id!");
             }
         }
-    
     }
 
     ```
-        Solucao: 
 
          

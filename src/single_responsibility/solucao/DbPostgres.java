@@ -4,10 +4,10 @@ import single_responsibility.violacao.ConectPostgres;
 
 public class DbPostgres {
 
-    public boolean salvar(Order pedido) {
+    public boolean save(Order order) {
         ConectPostgres dbConexao = new ConectPostgres("database.url");
         try {
-            dbConexao.salvar(pedido);
+            dbConexao.salvar(order);
         } catch (Exception e) {
            // log
            return false;

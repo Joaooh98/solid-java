@@ -1,8 +1,8 @@
 package liskov_substitution;
 
 import liskov_substitution.solucao.PinguimS;
-import liskov_substitution.violacao.Falcao;
-import liskov_substitution.violacao.Pinguim;
+import liskov_substitution.violation.Falcao;
+import liskov_substitution.violation.Pinguim;
 
 public class Main {
     public static void main(String[] args) {

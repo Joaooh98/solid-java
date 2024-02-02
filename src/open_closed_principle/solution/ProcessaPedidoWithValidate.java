@@ -1,9 +1,9 @@
 package open_closed_principle.solution;
 
 import single_responsibility.solucao.Order;
-import single_responsibility.solucao.ProcessaPedidoSRP;
+import single_responsibility.solucao.ProcessOrderSRP;
 
-public class ProcessaPedidoWithValidate extends ProcessaPedidoSRP{
+public class ProcessaPedidoWithValidate extends ProcessOrderSRP{
     
     public void processar(Order pedido){
         if (!pedido.isPossuiItens()) {

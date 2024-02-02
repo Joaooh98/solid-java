@@ -1,13 +1,13 @@
 package single_responsibility.solucao;
 
-public class ProcessaPedidoSRP {
+public class ProcessOrderSRP {
 
     public void processar(Order pedido) {
 
         DbPostgres dbPostgres = new DbPostgres();
-        EnviarConfirmacao enivarConfirmacao = new EnviarConfirmacao();
+        SendConfitmation enivarConfirmacao = new SendConfitmation();
 
-        dbPostgres.salvar(pedido);
+        dbPostgres.save(pedido);
 
         enivarConfirmacao.enviarEmailComfirmacao(pedido);
 

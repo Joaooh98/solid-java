@@ -2,7 +2,7 @@ package single_responsibility.violacao;
 
 import single_responsibility.solucao.Order;
 
-public class ProcessaPedido {
+public class ProcessOrder {
     public Order processar(Order pedido) {
         boolean persistidoBanco = salvar(pedido);
 

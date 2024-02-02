@@ -1,7 +1,7 @@
 package open_closed_principle.violation;
 
 import single_responsibility.solucao.DbPostgres;
-import single_responsibility.solucao.EnviarConfirmacao;
+import single_responsibility.solucao.SendConfitmation;
 import single_responsibility.solucao.Order;
 
 public class ProcessaPedido {
@@ -11,9 +11,9 @@ public class ProcessaPedido {
         }
 
         DbPostgres dbPostgres = new DbPostgres();
-        EnviarConfirmacao enivarConfirmacao = new EnviarConfirmacao();
+        SendConfitmation enivarConfirmacao = new SendConfitmation();
 
-        dbPostgres.salvar(pedido);
+        dbPostgres.save(pedido);
 
         enivarConfirmacao.enviarEmailComfirmacao(pedido);
 

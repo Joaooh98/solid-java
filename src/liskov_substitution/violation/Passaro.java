@@ -1,4 +1,4 @@
-package liskov_substitution.violacao;
+package liskov_substitution.violation;
 
 public abstract class Passaro {
     public abstract void bicar();
